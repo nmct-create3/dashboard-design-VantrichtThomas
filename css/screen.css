@@ -8,12 +8,18 @@
 
 :root {
     /* colors */
-    --color-alpha-light: MEDIUMSLATEBLUE;
-    --color-alpha: SLATEBLUE;
+    --color-neutral-xxx-light: #F0F0F7;
+    --color-neutral-xx-light: #EBEBF2;
+    --color-neutral-x-light: #D7DAE2;
+    --color-neutral-light: #BCBCCB;
+    --color-neutral: #A5A4BF;
+    --color-neutral-dark: #808495;
+    --color-neutral-x-dark: #4D4F5C;
+    --color-neutral-xx-dark: #43425D;
+    --color-neutral-xxx-dark: #3B3B53;
 
-    --color-neutral-light: LIGHTSLATEGRAY;
-    --color-neutral: SLATEGRAY;
-    --color-neutral-dark: DARKSLATEGRAY;
+    --color-alpha-light: MEDIUMSLATEBLUE;
+    --color-alpha: #A3A0FB;
 
     /* Shadows */
 
@@ -21,6 +27,13 @@
 
     /* transitions */
     --transition-alpha: .1s;
+    /* whitespace */
+    --basline: 5px;
+    --whitespace-xs: var(--basline);
+    --whitespace-sm: calc(var(--baseline) * 2);
+    --whitespace-md: calc(var(--baseline) * 3);
+    --whitespace-lg: calc(var(--baseline) * 4);
+    --whitespace-xl: calc(var(--baseline) * 5);
 }
 
 /*------------------------------------*\
@@ -34,14 +47,14 @@
 */
 
 html {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
-    color: var(--color-neutral-dark);
+    font-family: 'Source Sans Pro', Helvetica, arial, sans-serif;
+    color: var(--color-neutral-xx-dark);
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: white;
+    background-color: var(--color-neutral-xxx-light);
 }
 
 *,
@@ -290,10 +303,117 @@ input::placeholder {
 \*------------------------------------*/
 
 /*
-    Component: Logo
+    Component: logo
     ---
     Website main logo
 */
+
+.c-logo {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 21px;
+    margin: 0;
+    padding: 25px;
+    color: white;
+}
+
+/*
+    Component: app
+    ---
+    Website app
+*/
+
+.c-app {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 260px auto;
+  grid-auto-rows: max-content 1fr;
+}
+
+.c-app__logo {
+  background-color: var(--color-neutral-xxx-dark);
+  box-shadow: 0 2px 3px rgba(0,0,0,0.05);
+  position: sticky;
+}
+
+.c-app__sidebar {
+  background-color: var(--color-neutral-xx-dark);
+  position: sticky;
+
+  overflow-y: scroll;
+}
+
+.c-app__topbar{
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  position: sticky;
+}
+
+.c-app__main{
+  padding: 38px 75px;
+  background-color: var(--color-neutral-xxx-light);
+
+  overflow-y: scroll;
+}
+
+/*
+    Component: nav
+    ---
+    Website nav
+*/
+.c-main-nav {}
+
+.c-main-nav__list {
+  margin-bottom: 0;
+}
+
+.c-main-nav__item {
+ line-height: 20px;
+ padding: 20px 25px;
+ margin-top: var(--whitespace-xs);
+ position: relative;
+
+ /* Transistions */
+ transition: all 1s;
+}
+
+.c-main-nav__icon {
+  height: 16px;
+  width: 16px;
+  fill: var(--color-neutral);
+  margin-right: 15px;
+}
+
+.c-main-nav__link {
+  text-decoration: none;
+  color: white !important;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+}
+
+.c-main-nav__item:hover {
+  background-color: rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.c-main-nav__item:hover .c-main-nav__icon {
+  fill: var(--color-alpha);
+}
+
+.c-main-nav__item:hover::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: var(--color-alpha);
+}
+
 
 /*------------------------------------*\
 #UTILITIES

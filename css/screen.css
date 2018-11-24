@@ -34,6 +34,7 @@
     --whitespace-md: calc(var(--baseline) * 3);
     --whitespace-lg: calc(var(--baseline) * 4);
     --whitespace-xl: calc(var(--baseline) * 5);
+    --whitespace-xxl: calc(var(--baseline) * 6);
 }
 
 /*------------------------------------*\
@@ -347,6 +348,12 @@ input::placeholder {
   background-color: white;
   box-shadow: 0 2px 6px rgba(0,0,0,0.04);
   position: sticky;
+
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  padding: 20px;
 }
 
 .c-app__main{
@@ -414,6 +421,117 @@ input::placeholder {
   background-color: var(--color-alpha);
 }
 
+/*
+    Component: dashboard
+    ---
+    Website dashboard grid
+*/
+
+.c-dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.c-dashboard__item {
+  grid-column: span 12;
+  background-color: #FFF;
+  padding: 12px;
+  border-radius: 3px;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.05);
+}
+
+/*
+    Component: search
+    ---
+    Website search form
+*/
+
+.c-form {
+  flex-grow: 1;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+}
+
+.c-form__search {
+  height: 16px;
+  width: 16px;
+  fill: var(--color-neutral-light);
+  margin-right: 10px;
+}
+
+.c-form__input {
+    all: unset;
+    width: 100%;
+}
+
+/*
+    Component: mini-nav
+    ---
+    Website mini navigation
+*/
+
+.c-mini-nav {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-right: 1px solid var(--color-neutral-xx-light);
+  padding-right: 16px;
+}
+
+.c-mini-nav__item {
+  width: 16px;
+  height: 16px;
+  fill: var(--color-neutral-light);
+}
+
+.c-mini-nav__item + .c-mini-nav__item {
+  margin-left: 30px;
+}
+
+/*
+    Component: mini-nav
+    ---
+    Website mini navigation
+*/
+
+.c-user-menu {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  width: auto;
+}
+
+.c-user-menu__select-parent {
+  position: relative;
+}
+
+.c-user-menu__select {
+    all: unset;
+    margin-right: 11px;
+    width: 70px;
+}
+
+.c-user-menu__select-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  height: 7px;
+  width: 11px;
+  margin-top: -3.5px;
+  margin-right: 16px;
+  fill: var(--color-neutral-xx-light);
+}
+
+.c-user-menu__user {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
 
 /*------------------------------------*\
 #UTILITIES
@@ -515,6 +633,27 @@ input::placeholder {
 
 .u-text-sm {
     font-size: 14px;
+}
+
+/*
+    Utilities: grid width
+    Utility classes to set the right width to a grid element
+*/
+
+.u-1-of-2 {
+  grid-column: span 6;
+}
+
+.u-1-of-3 {
+  grid-column: span 4;
+}
+
+.u-2-of-3 {
+  grid-column: span 8;
+}
+
+.u-2-row {
+  grid-row: span 2;
 }
 
 /*------------------------------------*\

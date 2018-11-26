@@ -11,7 +11,8 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/screen.css">
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"></script>
+  <script src="js/app.js" charset="utf-8"></script>
 </head>
 
 <body>
@@ -138,11 +139,11 @@
       </symbol>
       <symbol id="c-icon_search" viewBox="0 0 16 16">
         <title>icon_search</title>
-        <path id="Search_Icon" d="M12.7,11.23a6.777,6.777,0,0,0,1.4-4.174A7.02,7.02,0,0,0,7.1,0,7.105,7.105,0,0,0,0,7.056a7.105,7.105,0,0,0,7.1,7.056,6.667,6.667,0,0,0,4.2-1.391l3,2.981a.971.971,0,0,0,1.4,0,.957.957,0,0,0,0-1.391Zm-5.6.8A5.022,5.022,0,0,1,2,7.056a5.1,5.1,0,0,1,10.2,0A5.022,5.022,0,0,1,7.1,12.025Z"/>
+        <path id="Search_Icon" d="M12.7,11.23a6.777,6.777,0,0,0,1.4-4.174A7.02,7.02,0,0,0,7.1,0,7.105,7.105,0,0,0,0,7.056a7.105,7.105,0,0,0,7.1,7.056,6.667,6.667,0,0,0,4.2-1.391l3,2.981a.971.971,0,0,0,1.4,0,.957.957,0,0,0,0-1.391Zm-5.6.8A5.022,5.022,0,0,1,2,7.056a5.1,5.1,0,0,1,10.2,0A5.022,5.022,0,0,1,7.1,12.025Z" />
       </symbol>
       <symbol id="c-icon-small-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 7">
         <title>icon_arrow_down</title>
-        <path d="M8.1,11.6,2.6,6.041,4.026,4.6,8.1,8.718,12.174,4.6,13.6,6.041Z" transform="translate(-2.6 -4.6)"/>
+        <path d="M8.1,11.6,2.6,6.041,4.026,4.6,8.1,8.718,12.174,4.6,13.6,6.041Z" transform="translate(-2.6 -4.6)" />
       </symbol>
     </defs>
   </svg>
@@ -185,7 +186,6 @@
             <use xlink:href="#c-icon-small-down" />
           </svg>
         </div>
-
         <img src="https://www.impulse-info.com/wp-content/uploads/2017/04/John-Doe.jpg" alt="user_image" class="c-user-menu__user">
       </div>
     </div>
@@ -193,15 +193,15 @@
       <nav class="c-main-nav">
         <ul class="o-list c-main-nav__list">
           <li class="c-main-nav__item">
-            <a href="#" class="c-main-nav__link">
+            <a href="#!" class="c-main-nav__link">
               <svg class="c-main-nav__icon">
                 <use xlink:href="#c-icon_home" />
               </svg>
               Home
             </a>
           </li>
-          <li class="c-main-nav__item">
-            <a href="#" class="c-main-nav__link">
+          <li class="c-main-nav__item c-main-nav__item--active">
+            <a href="#!" class="c-main-nav__link">
               <svg class="c-main-nav__icon">
                 <use xlink:href="#c-icon_dashboard" />
               </svg>
@@ -209,7 +209,7 @@
             </a>
           </li>
           <li class="c-main-nav__item">
-            <a href="#" class="c-main-nav__link">
+            <a href="#!" class="c-main-nav__link">
               <svg class="c-main-nav__icon">
                 <use xlink:href="#c-icon_inbox" />
               </svg>
@@ -217,7 +217,7 @@
             </a>
           </li>
           <li class="c-main-nav__item">
-            <a href="#" class="c-main-nav__link">
+            <a href="#!" class="c-main-nav__link">
               <svg class="c-main-nav__icon">
                 <use xlink:href="#c-icon_products" />
               </svg>
@@ -225,7 +225,7 @@
             </a>
           </li>
           <li class="c-main-nav__item">
-            <a href="#" class="c-main-nav__link">
+            <a href="#!" class="c-main-nav__link">
               <svg class="c-main-nav__icon">
                 <use xlink:href="#c-icon_Invoices" />
               </svg>
@@ -233,7 +233,7 @@
             </a>
           </li>
           <li class="c-main-nav__item">
-            <a href="#" class="c-main-nav__link">
+            <a href="#!" class="c-main-nav__link">
               <svg class="c-main-nav__icon">
                 <use xlink:href="#c-icon_customers" />
               </svg>
@@ -241,7 +241,7 @@
             </a>
           </li>
           <li class="c-main-nav__item">
-            <a href="#" class="c-main-nav__link">
+            <a href="#!" class="c-main-nav__link">
               <svg class="c-main-nav__icon">
                 <use xlink:href="#c-icon_chat-room" />
               </svg>
@@ -249,7 +249,7 @@
             </a>
           </li>
           <li class="c-main-nav__item">
-            <a href="#" class="c-main-nav__link">
+            <a href="#!" class="c-main-nav__link">
               <svg class="c-main-nav__icon">
                 <use xlink:href="#c-icon_calendar" />
               </svg>
@@ -257,7 +257,7 @@
             </a>
           </li>
           <li class="c-main-nav__item">
-            <a href="#" class="c-main-nav__link">
+            <a href="#!" class="c-main-nav__link">
               <svg class="c-main-nav__icon">
                 <use xlink:href="#c-icon_help-center" />
               </svg>
@@ -265,7 +265,7 @@
             </a>
           </li>
           <li class="c-main-nav__item">
-            <a href="#" class="c-main-nav__link">
+            <a href="#!" class="c-main-nav__link">
               <svg class="c-main-nav__icon">
                 <use xlink:href="#c-icon_setting" />
               </svg>
@@ -282,24 +282,52 @@
 
       <section class="c-dashboard">
         <div class="c-dashboard__item">
-          <p>Grid column 1</p>
+          <div class="c-card">
+            <div class="c-card__header">
+              <p class="c-card__title">Visitors per day</p>
+              <span class="c-custom-select">
+                <select class="c-input c-custom-select__input js-day" name="select1" id="select1">
+                  <option value="Maandag">Maandag</option>
+                  <option value="Dinsdag">Dinsdag</option>
+                  <option value="Woensdag">Woensdag</option>
+                  <option value="Donderdag">Donderdag</option>
+                  <option value="Vrijdag">Vrijdag</option>
+                  <option value="Zaterdag">Zaterdag</option>
+                  <option value="Zondag">Zondag</option>
+                </select>
+                <svg class="c-custom-select__symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M7,10l5,5,5-5Z" />
+                </svg>
+              </span>
+            </div>
+            <div class="c-card__body">
+              <canvas class="js-graph" width="3" height="1"></canvas>
+            </div>
+          </div>
         </div>
         <div class="c-dashboard__item u-1-of-2">
-          <p>Grid column 2</p>
+          <div class="c-card">
+            <div class="c-card__header">
+              <p class="c-card__title">Money</p>
+            </div>
+            <div class="c-card__body">
+              <p> Circle chart </p>
+            </div>
+          </div>
         </div>
         <div class="c-dashboard__item u-1-of-2">
           <p>Grid column 3</p>
         </div>
-        <div class="c-dashboard__item u-1-of-3 u-2-row">
+        <div class="c-dashboard__item u-1-of-3 u-4-row">
           <p>Grid column 4</p>
         </div>
-        <div class="c-dashboard__item u-2-of-3">
+        <div class="c-dashboard__item u-2-of-3 u-2-row">
           <p>Grid column 5</p>
         </div>
-        <div class="c-dashboard__item u-1-of-3">
+        <div class="c-dashboard__item u-1-of-3 u-2-row">
           <p>Grid column 6</p>
         </div>
-        <div class="c-dashboard__item u-1-of-3">
+        <div class="c-dashboard__item u-1-of-3 u-2-row">
           <p>Grid column 7</p>
         </div>
         <div class="c-dashboard__item u-1-of-3">
